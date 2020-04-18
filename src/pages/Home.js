@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
-class Home extends Component {
-  render() {
+const Home = () => {
+ 
     return (
       <Header title="amazing recipes">
         <Link to="recipes" className="text-uppercase btn btn-secondary btn-lg mt-3">
@@ -10,7 +10,7 @@ class Home extends Component {
         </Link>
       </Header>
     )
-  }
+  
 }
 
 export default Home

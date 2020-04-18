@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../components/Header'
 import { Link} from 'react-router-dom'
-class Default extends Component {
-  render() {
+const Default = () =>{
+ 
     return (
       <Header title="404" styleClass="default-hero">
         <h2 className="text-light text-uppercase">
@@ -13,7 +13,7 @@ class Default extends Component {
         </Link>
       </Header>
     )
-  }
+  
 }
 
 export default Default

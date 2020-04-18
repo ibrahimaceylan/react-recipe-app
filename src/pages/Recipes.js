@@ -1,13 +1,33 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import RecipeList from '../components/RecipeList'
+import Search from '../components/Search'
+import { recipeData } from '../data/tempList'
 
-class Recipes extends Component {
-  render() {
+const Recipes = () => {
+
+  const [recipes, setRecipes] = useState(recipeData)
+  const [search,setSearch] = useState('')
+
+
+    const handleChange = (e) =>{
+        setSearch(e.targe.value)
+    }
+
+    const handleSubmit = (e) =>{
+      e.preventDefault()
+    }
+
     return (
-      <h3>
-        hello from  Recipes
-      </h3>
+      <>
+        <Search 
+          search={search} 
+          handleChange={handleChange} 
+          handleSubmit={handleSubmit}
+        />
+        <RecipeList recipes={recipes}/>
+      </>
     )
-  }
+
 }
 
 export default Recipes
